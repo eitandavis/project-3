@@ -1,5 +1,4 @@
 # Project 3 Repo
-
 [My Github User Page: CIT Code Portfolio](https://eitandavis.github.io/)
 
 ## 281 Project 3 Learning Outcomes
