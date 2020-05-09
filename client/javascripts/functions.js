@@ -9,6 +9,7 @@ let arrOf1To100 = fillArray(1, 100, 1);
 //log the array for inspection
 console.log(arrOf1To100);
 
+//Req. 4B
 let bitBatBotOrNot = (n) => {
   let result = "";
   if (n % 3 == 0) {
@@ -17,27 +18,55 @@ let bitBatBotOrNot = (n) => {
   if (n % 5 == 0) {
     result = `${result}Bat`;
   }
+  if (n % 7 == 0) {
+    result = `${result}Bot`;
+  }
+  else if (n % 3 !== 0 && n % 5 !== 0 && n % 7 !== 0) {
+    result = `${result}Not`;
+}
   return result;
 };
 
+//Req. 4C
 let findAllbitBatBotOrNots1 = (arr) => {
-   //your code goes here
-   //use map method
+  let newArr = arr.map(n => n.toString() + ": " + bitBatBotOrNot(n));
+   return newArr;
 };
 
+//Req. 4D
 let findAllbitBatBotOrNots2 = (arr) => {
-   //your code goes here
-   //use for statement
+   let newArr2 = [];
+   for (var i = 0; i < arr.length; i++) {
+    let count = newArr2.push(`${arr[i]}: ${bitBatBotOrNot(arr[i])}`);
+  }
+  return newArr2;
 };
 
+//Req. 4E
 let findAllbitBatBotOrNots3 = (arr) => {
-   //your code goes here
-   //use for..of statement
+   let newArr3 = [];
+   for (var num of arr) {
+     let update = newArr3.push(`${num}: ${bitBatBotOrNot(num)}`);
+   }
+   return newArr3;
 };
 
+//Req. 4F
 let findAllbitBatBotOrNots4 = (arr) => {
-   //your code goes here
-   //use forEach method
+  let newArr4 = [];
+  arr.forEach((num) => {
+    let update = newArr4.push(`${num}: ${bitBatBotOrNot(num)}`);
+  });
+  return newArr4;
+};
+
+//Step 5 XC
+let findAllbitBatBotOrNotXC = (arr) => {
+  let newArr5 = [];
+  for (var num in arr){
+    let update = newArr5.push(`${num}: ${bitBatBotOrNot(n)}`);
+  }
+  return newArr5;
 };
 
 //test the functions
